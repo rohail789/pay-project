@@ -1,0 +1,27 @@
+<app-nav-bar></app-nav-bar>
+<div class="container" id="phndiv">
+    <h1>Sign In with Your Phone Number</h1>
+<div [hidden]="user" style="width:50%">
+
+  <label for="phone">Phone Number</label><br>
+  <input type="text" [(ngModel)]="country"  class="input" placeholder="1" >
+  <input type="text" [(ngModel)]="number"     class="input" placeholder="55555555" >
+  <div id="recaptcha-container"></div>
+
+  <button (click)="sendLoginCode()">SMS Text Login Code</button>
+
+  <div *ngIf="windowRef.confirmationResult">
+    <hr>
+    <label for="code">Enter your Verification Code Here</label><br>
+    <input type="text" name="code" [(ngModel)]="verificationCode">
+
+    <button (click)="verifyLoginCode()">Verify</button>
+  </div>
+
+</div>
+
+<div *ngIf="user">
+  You have successfully logged in with your phone number!
+
+</div>
+</div>

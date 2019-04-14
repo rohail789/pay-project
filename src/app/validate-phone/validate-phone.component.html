@@ -1,0 +1,26 @@
+
+<app-nav-bar></app-nav-bar>
+<div class="container" id="phnDiv">
+<form class="col s12" [formGroup]="validatePhone" novalidate (ngSubmit)="validatePhoneNumber()">
+<div class="row">
+  <div class="input-field col s6">
+    <input id="valphoneNumber" type="text" class="validate" formControlName="valphoneNumber">
+    <label class="active" for="valphoneNumber">Phone Number</label>
+    <span class="valerror" *ngIf="!validatePhone.controls['valphoneNumber'].valid && validatePhone.controls['valphoneNumber'].touched">
+      phone number is required
+    </span>
+  </div>
+</div>
+<div class="row">
+  <div class="input-field col s6">
+    <input id="valphoneRegion" type="text" class="validate" formControlName="valphoneRegion">
+    <label class="active" for="valphoneRegion">Phone Region</label>
+    <span class="valerror" *ngIf="!validatePhone.controls['valphoneRegion'].valid && validatePhone.controls['valphoneRegion'].touched">
+      Phone region is required
+    </span>
+  </div>
+</div>
+<button id="signupbtn" class="btn waves-effect green">Submit</button>
+
+</form>
+</div>

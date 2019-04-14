@@ -1,0 +1,61 @@
+#title {
+    background-color: lightblue;
+    color: white;
+    padding: 8px;
+    margin-top: 0px;
+    text-align: center;
+    font-weight: 700;
+}
+form{
+    padding: 0px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin: 0px 20px 0px 20px;
+}
+#signupbtn{
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.error{
+color: red;
+padding: 0px;
+margin: 0px;
+}
+.input-field{
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+}
+#errormsg{
+    background: #f6b6b6;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+#errormsg span {
+    top: 50%;
+    transform: translate(-50% , -50%);
+    left: 50%;
+    position: relative;
+    float: left;
+    font-size: 15px;
+}
+#successmsg{
+    background: lightgreen;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+#successmsg span {
+    top: 50%;
+    transform: translate(-50% , -50%);
+    left: 50%;
+    position: relative;
+    float: left;
+    font-size: 15px;
+}
+#formDiv{
+    margin-top: 20px !important;
+    width: 50%;
+}

@@ -1,0 +1,44 @@
+<app-nav-bar></app-nav-bar>
+  <div class="container" id="formDiv">
+  <div class="row">
+    <form class="col s12" [formGroup]="signupForm" novalidate (ngSubmit)="signupUser()">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="phoneNumber" type="text" class="validate" formControlName="phoneNumber">
+          <label class="active" for="phoneNumber">Phone Number</label>
+          <span class="error" *ngIf="!signupForm.controls['phoneNumber'].valid && signupForm.controls['phoneNumber'].touched">
+            phone number is required
+          </span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="password" type="password" class="validate" formControlName="password">
+          <label class="active" for="password">Password</label>
+          <span class="error" *ngIf="!signupForm.controls['password'].valid && signupForm.controls['password'].touched">
+            Password is required
+          </span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="email" type="email" class="validate" formControlName="email">
+          <label class="active" for="email">Email</label>
+          <span class="error" *ngIf="!signupForm.controls['email'].valid && signupForm.controls['email'].touched">
+            email is required
+          </span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="phoneRegion" type="text" formControlName="phoneRegion">
+          <label class="active" for="phoneRegion">Phone Region</label>
+          <span class="error" *ngIf="!signupForm.controls['phoneRegion'].valid && signupForm.controls['phoneRegion'].touched">
+            phone region is required
+          </span>
+        </div>
+      </div>
+      <button id="signupbtn" class="btn waves-effect green">Sign Up</button>
+    </form>
+  </div>
+</div>      
